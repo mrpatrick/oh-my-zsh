@@ -58,7 +58,11 @@ plugins=(git emacs-cli docker colorize github)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# GO
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH="$HOME/projects/go/"
+export PATH=$PATH:$GOPATH/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
