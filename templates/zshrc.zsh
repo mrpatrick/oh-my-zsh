@@ -65,6 +65,10 @@ export GOPATH="$HOME/projects/go/"
 export PATH=$PATH:$GOPATH/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# GNU
+export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin"
+export MANPATH="$MANPATH:/usr/local/opt/coreutils/libexec/gnuman"
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
