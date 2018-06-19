@@ -103,3 +103,8 @@ export SANDBOX=localhost:2376
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias swarm_stage="export DOCKER_HOST=$STAGE"
+alias swarm_staging="export DOCKER_HOST=$STAGING"
+alias swarm_sandbox="export DOCKER_HOST=$SANDBOX"
+alias swarm_prod_east="export DOCKER_HOST=$PROD_EAST"
+alias swarm_prod_euwest="export DOCKER_HOST=$PROD_EUWEST"
