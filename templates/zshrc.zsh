@@ -88,6 +88,12 @@ export EDITOR="$EMACS -nw"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+# See ~/.ssh/config
+export STAGING=localhost:2374
+export STAGE=localhost:2378
+export PROD_EUWEST=localhost:2377
+export PROD_EAST=localhost:2375
+export SANDBOX=localhost:2376
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
