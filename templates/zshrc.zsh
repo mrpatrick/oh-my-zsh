@@ -60,7 +60,7 @@ plugins=(git emacs-cli docker colorize github)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Docker
-export $PATH="$PATH:/Users/patrick/projects/docker-swarm/scripts"
+export PATH=$PATH:/Users/patrick/projects/docker-swarm/scripts
 
 # GO
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
