@@ -106,8 +106,8 @@ export SANDBOX=localhost:2376
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias swarm_stage="export DOCKER_HOST=$STAGE"
-alias swarm_staging="export DOCKER_HOST=$STAGING"
-alias swarm_sandbox="export DOCKER_HOST=$SANDBOX"
-alias swarm_prod_east="export DOCKER_HOST=$PROD_EAST"
-alias swarm_prod_euwest="export DOCKER_HOST=$PROD_EUWEST"
+alias swarm_stage="export DOCKER_HOST=$STAGE DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-stage.pem"
+alias swarm_staging="export DOCKER_HOST=$STAGING DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-staging.pem"
+alias swarm_sandbox="export DOCKER_HOST=$SANDBOX DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-sandbox.pem"
+alias swarm_prod_east="export DOCKER_HOST=$PROD_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-east.pem"
+alias swarm_prod_euwest="export DOCKER_HOST=$PROD_EUWEST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-euwest.pem"
