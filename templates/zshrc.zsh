@@ -97,6 +97,7 @@ export STAGE=localhost:2378
 export PROD_EUWEST=localhost:2377
 export PROD_EAST=localhost:2375
 export SANDBOX=localhost:2376
+export PROD2_EAST=localhost:2379
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -111,3 +112,4 @@ alias swarm_staging="export DOCKER_HOST=$STAGING DOCKER_SSH_KEY=/Users/patrick/.
 alias swarm_sandbox="export DOCKER_HOST=$SANDBOX DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-sandbox.pem"
 alias swarm_prod_east="export DOCKER_HOST=$PROD_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-east.pem"
 alias swarm_prod_euwest="export DOCKER_HOST=$PROD_EUWEST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-euwest.pem"
+alias swarm_prod2_east="export DOCKER_HOST=$PROD2_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod2-east.pem"
