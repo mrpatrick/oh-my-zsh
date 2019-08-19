@@ -53,7 +53,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git emacs-cli docker colorize github)
+plugins=(aws jump git encode64 docker docker-compose colorize github)
 
 # User configuration
 
@@ -71,6 +71,9 @@ export PATH=$PATH:$GOPATH/bin
 # GNU
 export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin"
 export MANPATH="$MANPATH:/usr/local/opt/coreutils/libexec/gnuman"
+
+#GPG
+export GPG_TTY=`tty`
 
 source $ZSH/oh-my-zsh.sh
 
