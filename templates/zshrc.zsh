@@ -72,6 +72,10 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin"
 export MANPATH="$MANPATH:/usr/local/opt/coreutils/libexec/gnuman"
 
+# Python
+# python -m virtualenv venv
+export PATH="$PATH:/Users/patrick/Library/Python/3.7/lib/python/site-packages"
+
 #GPG
 export GPG_TTY=`tty`
 
@@ -86,8 +90,23 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='emacs'
 # fi
-EMACS=$(which emacs)
+
+# Emacs
+function emacs()
+{
+  # -c creates a new frame
+  # -a= fires a new emacs server if none is running
+  emacsclient -c -a= $*
+}
+
+EMACS=$(which emacsclient)
 export EDITOR="$EMACS -nw"
+if [ -n "$INSIDE_EMACS" ]; then
+  chpwd() { print -P "\033AnSiTc %d" }
+  print -P "\033AnSiTu %n"
+  print -P "\033AnSiTc %d"
+fi
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -112,7 +131,7 @@ export PROD2_EAST=localhost:2379
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias swarm_stage="export DOCKER_HOST=$STAGE DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-stage.pem"
 alias swarm_staging="export DOCKER_HOST=$STAGING DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-staging.pem"
-alias swarm_sandbox="export DOCKER_HOST=$SANDBOX DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-sandbox.pem"
+alias swarm_sandbox="export DOCKER_HOST=$SANDBOX DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-staging.pem"
 alias swarm_prod_east="export DOCKER_HOST=$PROD_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-east.pem"
 alias swarm_prod_euwest="export DOCKER_HOST=$PROD_EUWEST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-euwest.pem"
 alias swarm_prod2_east="export DOCKER_HOST=$PROD2_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod2-east.pem"
