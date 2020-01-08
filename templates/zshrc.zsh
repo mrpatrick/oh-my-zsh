@@ -53,7 +53,15 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws jump git encode64 docker docker-compose colorize github)
+# fzf - https://github.com/junegunn/fzf
+plugins=(aws jump git encode64 docker docker-compose colorize github fzf)
+
+# homebrew plugins
+
+# https://github.com/zsh-users/zsh-autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
 
 # User configuration
 
@@ -135,3 +143,8 @@ alias swarm_sandbox="export DOCKER_HOST=$SANDBOX DOCKER_SSH_KEY=/Users/patrick/.
 alias swarm_prod_east="export DOCKER_HOST=$PROD_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-east.pem"
 alias swarm_prod_euwest="export DOCKER_HOST=$PROD_EUWEST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-euwest.pem"
 alias swarm_prod2_east="export DOCKER_HOST=$PROD2_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod2-east.pem"
+
+
+# syntax highlighting - https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
