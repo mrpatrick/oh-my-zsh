@@ -137,12 +137,12 @@ export PROD2_EAST=localhost:2379
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias swarm_stage="export DOCKER_HOST=$STAGE DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-stage.pem"
-alias swarm_staging="export DOCKER_HOST=$STAGING DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-staging.pem"
-alias swarm_sandbox="export DOCKER_HOST=$SANDBOX DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-staging.pem"
-alias swarm_prod_east="export DOCKER_HOST=$PROD_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-east.pem"
-alias swarm_prod_euwest="export DOCKER_HOST=$PROD_EUWEST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-euwest.pem"
-alias swarm_prod2_east="export DOCKER_HOST=$PROD2_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod2-east.pem"
+alias swarm_stage="export DOCKER_HOST=tcp://$STAGE DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-stage.pem"
+alias swarm_staging="export DOCKER_HOST=tcp://$STAGING DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-staging.pem"
+alias swarm_sandbox="export DOCKER_HOST=tcp://$SANDBOX DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-staging.pem"
+alias swarm_prod_east="export DOCKER_HOST=tcp://$PROD_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-east.pem"
+alias swarm_prod_euwest="export DOCKER_HOST=tcp://$PROD_EUWEST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod-euwest.pem"
+alias swarm_prod2_east="export DOCKER_HOST=tcp://$PROD2_EAST DOCKER_SSH_KEY=/Users/patrick/.ssh/swarm-prod2-east.pem"
 
 
 # syntax highlighting - https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
